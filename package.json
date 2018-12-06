@@ -1,14 +1,9 @@
 {
-	"name": "gulp-strip-debug",
+	"name": "gulp-strip-debug-option",
 	"version": "3.0.0",
 	"description": "Strip console and debugger statements from JavaScript code",
 	"license": "MIT",
-	"repository": "sindresorhus/gulp-strip-debug",
-	"author": {
-		"name": "Sindre Sorhus",
-		"email": "sindresorhus@gmail.com",
-		"url": "sindresorhus.com"
-	},
+	"repository": "SamLiu001/gulp-strip-debug-option",
 	"engines": {
 		"node": ">=4"
 	},
@@ -37,7 +32,7 @@
 	],
 	"dependencies": {
 		"plugin-error": "^1.0.1",
-		"strip-debug": "^3.0.0",
+		"strip-debug-option": "4.0.0",
 		"through2": "^2.0.0"
 	},
 	"devDependencies": {

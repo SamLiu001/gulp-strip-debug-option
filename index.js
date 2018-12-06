@@ -1,9 +1,9 @@
 'use strict';
 const through = require('through2');
-const stripDebug = require('strip-debug');
+const stripDebug = require('strip-debug-option');
 const PluginError = require('plugin-error');
 
-module.exports = () => {
+module.exports = (option) => {
 	return through.obj(function (file, enc, cb) {
 		if (file.isNull()) {
 			cb(null, file);
@@ -16,7 +16,7 @@ module.exports = () => {
 		}
 
 		try {
-			file.contents = Buffer.from(stripDebug(file.contents.toString()).toString());
+			file.contents = Buffer.from(stripDebug(file.contents.toString(),option).toString());
 			this.push(file);
 		} catch (err) {
 			this.emit('error', new PluginError('gulp-strip-debug', err, {fileName: file.path}));
