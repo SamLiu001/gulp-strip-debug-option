@@ -13,7 +13,7 @@ $ npm install --save-dev gulp-strip-debug-option
 
 ```js
 const gulp = require('gulp');
-const stripDebug = require('gulp-strip-debug');
+const stripDebug = require('gulp-strip-debug-option');
 
 const option={
 	skipDebugger:false,
